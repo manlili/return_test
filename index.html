@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>return验证测试</title>
+		<script language="javascript">
+			function Login_Click1()
+			{
+			    if(document.form1.UsName.value=="")
+			    {
+			        alert('用户名为空1');
+			        return;
+			    }
+			    if(document.form1.UsPwd.value=="")
+			    {
+			        alert('密码为空1');
+			    }
+			    alert('登陆成功1');
+			    doTest();
+			}
+			doTest= function () { //在Login_Click1中调用此函数
+				alert('全部显示成功1');
+			}
+			
+			function Login_Click2()
+			{
+			    if(document.form1.UsName.value=="")
+			    {
+			        alert('用户名为空2');
+			    }
+			    if(document.form1.UsPwd.value=="")
+			    {
+			        alert('密码为空2');
+			    }
+			    alert('登陆成功2');
+			}
+		</script>
+	</head>
+	<body>
+	    <form name="form1">
+	        <input type="text" name="UsName" >用户名
+	        <input type="password" name="UsPwd">密码<br />
+	        <input type="button" name="Login" onClick="Login_Click1();" value="登陆1"> <br />
+	        <input type="button" name="Login" onClick="Login_Click2();" value="登陆2"> <br />
+	    </form>
+	</body>
+</html>
